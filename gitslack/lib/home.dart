@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gitslack/constants.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:gitslack/web_view.dart';
 
 class MyHome extends StatefulWidget {
   const MyHome({super.key});
@@ -10,11 +10,8 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
-  // Future<void> _launchURLApp() async {
   @override
   Widget build(BuildContext context) {
-    Uri website = Uri.parse("https://github.com/Akashiutchiha");
-
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 18, 4, 43),
       body: Container(
@@ -78,10 +75,11 @@ class _MyHomeState extends State<MyHome> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      launchUrl(website, mode: LaunchMode.inAppWebView);
-                    });
+                  onPressed: () async {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyProfile()));
                   },
                   child: Center(
                     child: Row(
