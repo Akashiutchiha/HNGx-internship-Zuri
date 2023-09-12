@@ -47,38 +47,39 @@ class _EditState extends State<Edit> {
           title: Text('Edit CV', style: TextStyle(fontWeight: FontWeight.w500)),
         ),
         body: Container(
-          padding: EdgeInsets.only(top: 40),
+          padding: EdgeInsets.only(top: 5),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
-                height: 40,
+              Expanded(
+                child: SizedBox(
+                  height: 40,
+                ),
               ),
               MyTextField('Full Name', fullname),
               MyTextField('Slack Name', slackUsername),
               MyTextField('Github Handle', githubHandle),
               MyTextField('Bio', bio),
-              SizedBox(
-                height: 20,
-              ),
-              Spacer(),
-              Container(
-                //I want to have a cool button displaying "Save" here
-                margin: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pop(context, {
-                      "fullname": fullname.text,
-                      "slackUsername": slackUsername.text,
-                      "githubHandle": githubHandle.text,
-                      "bio": bio.text,
-                    });
-                  },
-                  child: Text('Save'),
+              Expanded(child: Spacer()),
+              Expanded(
+                child: Container(
+                  //I want to have a cool button displaying "Save" here
+                  margin: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context, {
+                        "fullname": fullname.text,
+                        "slackUsername": slackUsername.text,
+                        "githubHandle": githubHandle.text,
+                        "bio": bio.text,
+                      });
+                    },
+                    child: Text('Save'),
+                  ),
                 ),
               ),
               SizedBox(

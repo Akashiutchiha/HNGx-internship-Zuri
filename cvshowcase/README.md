@@ -1,16 +1,17 @@
 # cvshowcase
 
-A new Flutter project.
+A Resume App build with flutter
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get started with this project. 
+- fork it and clone it to your local machine
+- run `flutter pub get` to get all the dependencies
+- run `flutter run` to run the app on your device or emulator
+- run `flutter build apk` at the project level to build the apk file
+ 
 
-A few resources to get you started if this is your first Flutter project:
+## About CV Showcase
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    This app has a first screen(home screen) where the information is displayed and 
+    a second screen(edit screen) in order for the user to edit his info when ever he wants.
